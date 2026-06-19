@@ -170,56 +170,57 @@
     </div>
   </section>
 
- <style>
-  /* 确保无圆角、无阴影，原生视频尺寸填满 */
+<style>
+  /* 优化后的视频样式：控制最大宽度、自适应比例，并增加轻微质感 */
   .video-clean {
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    object-fit: cover; 
+    border-radius: 6px !important; /* 增加轻微圆角使排版更柔和，如需绝对直角可改为 0 */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05) !important; /* 增加极淡的阴影提升层次感 */
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
   }
 </style>
 
 <section class="section hero is-light">
-  <div class="container is-max-widescreen">
+  <div class="container is-max-desktop">
     
-    <h2 class="title is-3 has-text-centered">Real-video</h2>
-    <div class="columns is-centered"> 
+    <h2 class="title is-3 has-text-centered mb-5">Real-video</h2>
+    
+    <div class="columns is-centered is-multiline"> 
       
       <div class="column is-half">
-        <figure class="image is-16by9">
-          <video class="video-clean" autoplay controls muted loop playsinline width="85%">
-            <source src="static/videos/Wipe_whiteboard_imu_speedx1.mp4" type="video/mp4">
-          </video>
-        </figure>
+        <video class="video-clean" autoplay controls muted loop playsinline>
+          <source src="static/videos/Wipe_whiteboard_imu_speedx1.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2 is-size-6 has-text-grey">Wipe Whiteboard</p>
       </div>
 
       <div class="column is-half">
-        <figure class="image is-16by9">
-          <video class="video-clean" autoplay controls muted loop playsinline width="85%">
-            <source src="static/videos/Arrange_Flower_imu_speedx1(1).mp4" type="video/mp4">
-          </video>
-        </figure>
+        <video class="video-clean" autoplay controls muted loop playsinline>
+          <source src="static/videos/Arrange_Flower_imu_speedx1(1).mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2 is-size-6 has-text-grey">Arrange Flower</p>
       </div>
 
     </div>
 
-    <h2 class="title is-3 has-text-centered" style="margin-top: 30px;">Dynamic Task and Long Horizon</h2>
-    <div class="columns is-centered">
+    <h2 class="title is-3 has-text-centered mt-6 mb-5">Dynamic Task & Long Horizon</h2>
+    
+    <div class="columns is-centered is-multiline">
       
       <div class="column is-half">
-        <figure class="image is-16by9">
-          <video class="video-clean" autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/Dynamic_Task_2.mp4" type="video/mp4">
-          </video>
-        </figure>
+        <video class="video-clean" autoplay controls muted loop playsinline>
+          <source src="static/videos/Dynamic_Task_2.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2 is-size-6 has-text-grey">Dynamic Task</p>
       </div>
 
       <div class="column is-half">
-        <figure class="image is-16by9">
-          <video class="video-clean" autoplay controls muted loop playsinline width="100%">
-            <source src="static/videos/Long_Horizon_2.mp4" type="video/mp4">
-          </video>
-        </figure>
+        <video class="video-clean" autoplay controls muted loop playsinline>
+          <source src="static/videos/Long_Horizon_2.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered mt-2 is-size-6 has-text-grey">Long Horizon Task</p>
       </div>
 
     </div>
