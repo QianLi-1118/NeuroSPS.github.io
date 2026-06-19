@@ -169,48 +169,57 @@
     </div>
   </section>
 
- <section class="section hero is-light">
-  <div class="container is-max-widescreen">
-    <h2 class="title is-3 has-text-centered">Real-video</h2>
-    <div class="columns is-centered">
-      
-      <section class="section hero is-light">
+ <style>
+  /* 统一 Figure 的视觉风格，添加微妙的背景色和圆角，减少黑边的生硬感 */
+  .contain-video-figure {
+    background-color: transparent; /* 背景透明，除非你想给黑边加个颜色 */
+    border-radius: 8px; /* Figure 外框圆角 */
+    overflow: hidden; /* 确保内容不溢出 Figure 框 */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 添加一个微妙的阴影，让卡片感更强，底边更显整齐 */
+  }
+
+  /* 针对 contain 视频的特定样式 */
+  .contain-video-content {
+    object-fit: contain; /* 核心：完整包含，不裁剪 */
+    width: 100%; /* 填满 Figure 宽度 */
+    height: 100%; /* 填满 Figure 高度，这在比例 Figure 中起作用 */
+    border-radius: 8px; /* 视频本身加圆角，让边缘更柔和 */
+  }
+</style>
+
+<section class="section hero is-light">
   <div class="container is-max-widescreen">
     <h2 class="title is-3 has-text-centered">Real-video</h2>
     <div class="columns is-centered is-vcentered"> 
       
       <div class="column is-one-quarter">
-        <figure class="image">
-          <video class="has-ratio" autoplay controls muted loop playsinline 
-                 style="height: auto; width: 100%; object-fit: contain; border-radius: 8px; background-color: transparent;">
-            <source src="static/videos/6%E6%9C%8819%E6%97%A5%20(2).mp4" type="video/mp4">
+        <figure class="image is-16by9 contain-video-figure">
+          <video class="has-ratio contain-video-content" autoplay controls muted loop playsinline>
+            <source src="static/videos/6月19日_(2).mp4" type="video/mp4">
           </video>
         </figure>
       </div>
 
       <div class="column is-one-quarter">
-        <figure class="image">
-          <video class="has-ratio" autoplay controls muted loop playsinline 
-                 style="height: auto; width: 100%; object-fit: contain; border-radius: 8px; background-color: transparent;">
-            <source src="static/videos/Arrange%20Flower_imu_speedx1(1).mp4" type="video/mp4">
+        <figure class="image is-16by9 contain-video-figure">
+          <video class="has-ratio contain-video-content" autoplay controls muted loop playsinline>
+            <source src="static/videos/Arrange_Flower_imu_speedx1(1).mp4" type="video/mp4">
           </video>
         </figure>
       </div>
 
       <div class="column is-one-quarter">
-        <figure class="image">
-          <video class="has-ratio" autoplay controls muted loop playsinline 
-                 style="height: auto; width: 100%; object-fit: contain; border-radius: 8px; background-color: transparent;">
-            <source src="static/videos/Dynamic%20Task_2.mp4" type="video/mp4">
+        <figure class="image is-16by9 contain-video-figure">
+          <video class="has-ratio contain-video-content" autoplay controls muted loop playsinline>
+            <source src="static/videos/Dynamic_Task_2.mp4" type="video/mp4">
           </video>
         </figure>
       </div>
 
       <div class="column is-one-quarter">
-        <figure class="image">
-          <video class="has-ratio" autoplay controls muted loop playsinline 
-                 style="height: auto; width: 100%; object-fit: contain; border-radius: 8px; background-color: transparent;">
-            <source src="static/videos/Long%20Horizon_2.mp4" type="video/mp4">
+        <figure class="image is-16by9 contain-video-figure">
+          <video class="has-ratio contain-video-content" autoplay controls muted loop playsinline>
+            <source src="static/videos/Long_Horizon_2.mp4" type="video/mp4">
           </video>
         </figure>
       </div>
