@@ -197,31 +197,40 @@
     </div>
   </section>
 
-  <section class="section hero is-light">
+<style>
+  .uniform-video {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* 强制统一为 16:9 比例，您也可以根据视频实际情况改为 4:3 等 */
+    object-fit: cover;    /* 自动裁切边缘填满相框，保证不变形 */
+    border-radius: 8px;   /* 添加一点圆角让视觉效果更好（不需要可删除） */
+  }
+</style>
+
+<section class="section hero is-light">
   <div class="container is-max-widescreen">
     <h2 class="title is-3 has-text-centered">Real-video</h2>
     <div class="columns is-centered">
       
       <div class="column is-one-quarter">
-        <video autoplay controls muted loop playsinline width="100%">
+        <video class="uniform-video" autoplay controls muted loop playsinline>
           <source src="static/videos/6月19日 (2).mp4" type="video/mp4">
         </video>
       </div>
 
       <div class="column is-one-quarter">
-        <video autoplay controls muted loop playsinline width="100%">
+        <video class="uniform-video" autoplay controls muted loop playsinline>
           <source src="static/videos/Arrange Flower_imu_speedx1(1).mp4" type="video/mp4">
         </video>
       </div>
 
       <div class="column is-one-quarter">
-        <video autoplay controls muted loop playsinline width="100%">
+        <video class="uniform-video" autoplay controls muted loop playsinline>
           <source src="static/videos/Dynamic_Task_2.mp4" type="video/mp4">
         </video>
       </div>
 
       <div class="column is-one-quarter">
-        <video autoplay controls muted loop playsinline width="100%">
+        <video class="uniform-video" autoplay controls muted loop playsinline>
           <source src="static/videos/Long_Horizon_2.mp4" type="video/mp4">
         </video>
       </div>
