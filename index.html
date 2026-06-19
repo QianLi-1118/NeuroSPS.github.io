@@ -104,23 +104,24 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              To address data redundancy, fine manipulation errors, poor disturbance rejection, and execution jitter in Vision-Language-Action (VLA) models and end-to-end imitation learning for long-horizon tasks, this paper proposes <strong>NeuroSPS</strong>, a neuro-inspired manipulation framework integrating human sensorimotor mechanisms. It introduces three core algorithmic and control innovations:
+              <strong>Overview:</strong> While Vision-Language-Action (VLA) models and imitation learning have unlocked complex robotic capabilities, existing end-to-end strategies bottleneck when it comes to <em>precise manipulation</em>. Issues like inefficient data preprocessing, disconnected macroscopic decisions from physical error correction, and high-frequency action jitter lead to progressive error accumulation. Inspired by the efficiency of human motor control, we introduce <strong>NeuroSPS</strong>, a framework designed for targeted modular optimization across data input, perception-decision, and execution stages.
             </p>
             
+            <p><strong>Core Innovations:</strong></p>
             <ul>
               <li>
-                <strong>First</strong>, the <strong>Semantic Window Refiner (SWR)</strong> algorithm combines a sliding window with operational semantics detection to reduce trajectory preprocessing complexity from <i>O</i>(<i>n</i><sup>2</sup>) to <i>O</i>(<i>kn</i>). It achieves high-fidelity extraction of intent-critical frames and accelerates data processing by ~100x, effectively overcoming the bottleneck of massive demonstration data.
+                <strong>SWR Downsampling Algorithm:</strong> By integrating a sliding window, semantic keypoint detection, and multi-order error compensation, SWR reduces computational complexity from <i>O</i>(<i>n</i><sup>2</sup>) to <i>O</i>(<i>kn</i>). It compresses redundant data while perfectly retaining high-fidelity intention keyframes and trajectory smoothness. <strong>Performance Leap:</strong> Processing 1,500 real-world frames takes only 2-3 s/it, achieving an astonishing <strong>&gt;1000x acceleration</strong>.
               </li>
               <li>
-                <strong>Second</strong>, the <strong>Real-Time Dual-Path Proprioceptive Correction Network (RT-DPC Net)</strong> overcomes the perception limitations of visual feedforward policies. Path I pre-fuses joint states with high-precision end-effector IMU data at the encoder to enhance multimodal state estimation. Path II introduces a time-step-based dynamic weighting injection at the decoder, enabling real-time closed-loop micro-correction during complex physical contacts and boosting fine manipulation success rates by up to 18%.
+                <strong>RT-DPC Net:</strong> Deeply fuses IMU features to dramatically enhance feedforward state estimation. During action generation, it introduces a temporal dynamic weighting mechanism tailored for active error correction during robot inference.
               </li>
               <li>
-                <strong>Finally</strong>, a training-inference synergistic <strong>S2F</strong> mechanism is designed. By introducing a temporal smooth loss during training and an adaptive filter based on action change rates during inference, it effectively mitigates execution jitter, yielding an additional success rate increase of up to 10% for fine tasks.
+                <strong>S2F Mechanism:</strong> A synergistic approach that combines training-phase temporal smoothing loss with inference-phase adaptive filtering to aggressively suppress compound errors caused by action jitter.
               </li>
             </ul>
 
             <p>
-              Evaluated across 10 complex simulated and real-world manipulation tasks, NeuroSPS outperforms current mainstream strategies with an average success rate of 74.6%. Compared to the ACT baseline, it improves task success rates by an average of 21% (up to 35%), thoroughly validating its high generalization capability and execution robustness in unstructured environments.
+              <strong>Exceptional Performance:</strong> When applied independently, SWR, RT-DPC Net, and S2F yield maximum success rate gains of 17%, 26%, and 18%, respectively. Evaluated across 12 rigorous simulation and real-world tasks, NeuroSPS achieves an average success rate of <strong>71.5%</strong>. Boasting a <strong>22%</strong> average performance improvement over the ACT baseline and outperforming mainstream strategies like InterACT, NeuroSPS significantly enhances robotic adaptability and stability in unstructured environments, paving an efficient modular path for autonomous manipulation.
             </p>
           </div>
         </div>
